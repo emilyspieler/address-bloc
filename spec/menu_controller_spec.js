@@ -6,8 +6,6 @@ const MenuController = require("../controllers/MenuController");
       this.menu = new MenuController();
     });
    describe("#getContactCount()", () => {
-
-// #2
      it("should return 0 when no contacts are in the book", () => {
        expect(this.menu.getContactCount()).toBe(0);
      });
@@ -15,5 +13,10 @@ const MenuController = require("../controllers/MenuController");
        this.menu.contacts.push("Bob");
        expect(this.menu.getContactCount()).toBe(1)
    });
+   describe("#remindMe()", () => {
+     it("should return Learning is a lifelong persuit", () => {
+       expect(this.menu.remindMe());
    });
+  });
  });
+});
