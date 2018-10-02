@@ -66,12 +66,12 @@ const ContactController = require("./ContactController");
    addContact(){
         this.clear();
         inquirer.prompt(this.book.addContactQuestions).then((answers) => {
-        this.book.addContact(answers.name, answers.phone, answers.email).then((contact) => {
-        console.log("Contact added successfully!");
-        this.main();
+       this.book.addContact(answers.name, answers.phone).then((contact) => {
+         console.log("Contact added successfully!");
+         this.main();
        }).catch((err) => {
-        console.log(err);
-        this.main();
+         console.log(err);
+         this.main();
        });
      });
       }
@@ -86,6 +86,8 @@ const ContactController = require("./ContactController");
          }
 
       remindMe(){
-        return ("Learning is a life-long pursuit");
+        console.log("Learning is a life-long pursuit");
       }
  }
+
+//assignment testing
